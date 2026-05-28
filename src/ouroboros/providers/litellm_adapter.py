@@ -120,6 +120,7 @@ class LiteLLMAdapter:
         timeout: float = 60.0,
         max_retries: int = 3,
         io_recorder: "IOJournalRecorder | None" = None,
+        force_provider: str | None = None,
     ) -> None:
         """Initialize the LiteLLM adapter.
 
@@ -143,6 +144,7 @@ class LiteLLMAdapter:
         self._max_retries = max_retries
         self._credentials_cache: object = _CREDENTIALS_UNSET
         self._io_recorder = io_recorder
+        self._force_provider = force_provider
 
     def _load_credentials_config(self):
         """Load credentials.yaml once, caching missing-config cases."""
@@ -291,6 +293,9 @@ class LiteLLMAdapter:
         api_base = self._get_api_base(config.model)
         if api_base:
             kwargs["api_base"] = api_base
+
+        if self._force_provider:
+            kwargs["custom_llm_provider"] = self._force_provider
 
         return kwargs
 

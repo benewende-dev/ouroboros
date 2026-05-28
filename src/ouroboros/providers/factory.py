@@ -293,6 +293,7 @@ def create_llm_adapter(
         return LiteLLMAdapter(
             api_key=outio_key,
             api_base=outio_base,
+            force_provider="openai",
             timeout=timeout,
             max_retries=max_retries,
             io_recorder=io_recorder,
