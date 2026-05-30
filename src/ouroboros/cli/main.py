@@ -71,7 +71,7 @@ class _PluginAwareGroup(TyperGroup):
 # Create the main Typer app
 app = typer.Typer(
     name="ouroboros",
-    help="Ouroboros - Self-Improving AI Workflow System",
+    help="OutioCode - Self-Improving AI Workflow System",
     no_args_is_help=True,
     rich_markup_mode="rich",
     cls=_PluginAwareGroup,
@@ -114,7 +114,7 @@ def monitor(
 def version_callback(value: bool) -> None:
     """Print version and exit."""
     if value:
-        console.print(f"[bold cyan]Ouroboros[/] version [green]{__version__}[/]")
+        console.print(f"[bold cyan]OutioCode[/] version [green]{__version__}[/]")
         raise typer.Exit()
 
 
@@ -131,7 +131,7 @@ def main(
         ),
     ] = None,
 ) -> None:
-    """Ouroboros - Self-Improving AI Workflow System.
+    """OutioCode - Self-Improving AI Workflow System.
 
     A self-improving AI workflow system with 6 phases:
     Big Bang, PAL Router, Execution, Resilience, Evaluation, and Consensus.
