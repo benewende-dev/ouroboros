@@ -19,7 +19,7 @@ from ouroboros.codex import install_codex_artifacts
 
 app = typer.Typer(
     name="codex",
-    help="Manage Ouroboros Codex CLI integration artifacts.",
+    help="Manage OutioCode Codex CLI integration artifacts.",
     no_args_is_help=True,
 )
 
@@ -52,7 +52,7 @@ class _CodexMCPCommandEntry:
 
 @app.callback()
 def codex() -> None:
-    """Manage Ouroboros Codex CLI integration artifacts."""
+    """Manage OutioCode Codex CLI integration artifacts."""
 
 
 @app.command("refresh")

@@ -23,7 +23,7 @@ from ouroboros.cli.formatters.tables import create_key_value_table, print_table
 
 app = typer.Typer(
     name="config",
-    help="Manage Ouroboros configuration.",
+    help="Manage OutioCode configuration.",
     no_args_is_help=True,
 )
 
@@ -293,7 +293,7 @@ def backend(
 
 @app.command()
 def init() -> None:
-    """Initialize Ouroboros configuration.
+    """Initialize OutioCode configuration.
 
     Creates default configuration files if they don't exist.
     Only creates missing files — never overwrites existing ones.

@@ -1,15 +1,15 @@
-"""Ouroboros CLI main entry point.
+"""OutioCode CLI main entry point.
 
 This module defines the main Typer application and registers
-all command groups for the Ouroboros CLI.
+all command groups for the OutioCode CLI.
 
 Command shortcuts (v0.8.0+):
-    ouroboros run seed.yaml          # shorthand for: ouroboros run workflow seed.yaml
-    ouroboros init "Build an API"    # shorthand for: ouroboros init start "Build an API"
-    ouroboros monitor                # shorthand for: ouroboros tui monitor
+    outio-code run seed.yaml          # shorthand for: outio-code run workflow seed.yaml
+    outio-code init "Build an API"    # shorthand for: outio-code init start "Build an API"
+    outio-code monitor                # shorthand for: outio-code tui monitor
 
 Plugin dispatch (v0.10+):
-    ouroboros <plugin-name> <command> [args...]
+    outio-code <plugin-name> <command> [args...]
         Dispatches to an installed UserLevel plugin via the firewall.
         See `docs/rfc/userlevel-plugins.md` for the contract.
 """
@@ -107,7 +107,7 @@ def monitor(
         ),
     ] = "python",
 ) -> None:
-    """Launch the TUI monitor (shorthand for 'ouroboros tui monitor')."""
+    """Launch the TUI monitor (shorthand for 'outio-code tui monitor')."""
     tui.monitor_command(backend=backend)
 
 
@@ -138,11 +138,11 @@ def main(
 
     [bold]Quick Start:[/]
 
-        ouroboros init "Build a REST API"     Start interview
-        ouroboros run seed.yaml               Execute workflow
-        ouroboros monitor                     Launch TUI monitor
+        outio-code init "Build a REST API"     Start interview
+        outio-code run seed.yaml               Execute workflow
+        outio-code monitor                     Launch TUI monitor
 
-    Use [bold cyan]ouroboros COMMAND --help[/] for command-specific help.
+    Use [bold cyan]outio-code COMMAND --help[/] for command-specific help.
     """
     pass
 

@@ -19,7 +19,7 @@ DEFAULT_DB_PATH = Path(os.path.expanduser("~/.ouroboros/ouroboros.db"))
 
 app = typer.Typer(
     name="tui",
-    help="Interactive TUI monitor for Ouroboros workflows.",
+    help="Interactive TUI monitor for OutioCode workflows.",
     no_args_is_help=False,
 )
 
@@ -30,7 +30,7 @@ def monitor_command(
         Path,
         typer.Option(
             "--db-path",
-            help="Path to the Ouroboros database file to monitor.",
+            help="Path to the OutioCode database file to monitor.",
             resolve_path=True,
             show_default=True,
         ),
@@ -87,7 +87,7 @@ def monitor_command(
 def main(
     ctx: typer.Context,
 ) -> None:
-    """Interactive TUI monitor for Ouroboros workflows."""
+    """Interactive TUI monitor for OutioCode workflows."""
     if ctx.invoked_subcommand is None:
         ctx.invoke(monitor_command)
 

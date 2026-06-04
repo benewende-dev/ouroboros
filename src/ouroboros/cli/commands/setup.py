@@ -143,7 +143,7 @@ def _ensure_claude_mcp_entry() -> None:
 
 app = typer.Typer(
     name="setup",
-    help="Set up Ouroboros for your environment.",
+    help="Set up OutioCode for your environment.",
     invoke_without_command=True,
 )
 
@@ -2324,7 +2324,7 @@ def setup(
         ),
     ] = "auto",
 ) -> None:
-    """Set up Ouroboros for your environment.
+    """Set up OutioCode for your environment.
 
     Detects available runtimes (Claude Code, Codex, OpenCode, Hermes, Gemini, Kiro, Copilot, Goose)
     and configures Ouroboros to use the selected backend.

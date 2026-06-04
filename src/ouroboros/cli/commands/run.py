@@ -52,7 +52,7 @@ class _DefaultWorkflowGroup(typer.core.TyperGroup):
 
 app = typer.Typer(
     name="run",
-    help="Execute Ouroboros workflows.",
+    help="Execute OutioCode workflows.",
     no_args_is_help=True,
     cls=_DefaultWorkflowGroup,
 )

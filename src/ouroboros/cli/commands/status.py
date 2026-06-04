@@ -27,7 +27,7 @@ from ouroboros.mcp.tools.projection_handlers import ProjectionQueryHandler
 
 app = typer.Typer(
     name="status",
-    help="Check Ouroboros system status.",
+    help="Check OutioCode system status.",
     no_args_is_help=True,
 )
 

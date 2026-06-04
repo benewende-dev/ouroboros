@@ -37,7 +37,7 @@ from ouroboros.codex import CODEX_RULE_FILENAME, resolve_packaged_codex_assets
 
 app = typer.Typer(
     name="uninstall",
-    help="Cleanly remove Ouroboros from your system.",
+    help="Cleanly remove OutioCode from your system.",
 )
 
 
@@ -406,9 +406,9 @@ def uninstall(
         ),
     ] = False,
 ) -> None:
-    """Cleanly remove all Ouroboros configuration from your system.
+    """Cleanly remove all OutioCode configuration from your system.
 
-    Reverses everything `ouroboros setup` did. Does NOT remove the
+    Reverses everything `outio-code setup` did. Does NOT remove the
     Python package itself — run `pip uninstall ouroboros-ai` separately.
 
     [dim]Examples:[/dim]
