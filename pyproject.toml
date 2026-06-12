@@ -39,8 +39,10 @@ all = ["outio-code[claude,copilot,litellm,mcp,tui,dashboard]"]
 # OutioCode est le rebranding du CLI Ouroboros. Le binaire principal
 # est `outio-code` ; `ouroboros` reste comme alias pour les utilisateurs
 # qui connaissaient le projet upstream.
+# NB : la commande courte `outio` est réservée à l'IDE OutioCode
+# (OpenCode rebrandé), donc PAS d'alias `outio` ici pour éviter la
+# collision sur le PATH quand les deux outils sont installés.
 outio-code = "ouroboros.cli.main:app"
-outio = "ouroboros.cli.main:app"
 ouroboros = "ouroboros.cli.main:app"
 ooo = "ouroboros.cli.main:app"
 
